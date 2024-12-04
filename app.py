@@ -73,7 +73,8 @@ def get_financial_data(ticker):
             'Assets': None,
             'ROE': None,
             'ROA': None,
-            'Net_Margin': None
+            'Net_Margin': None,
+            'Interest_Expense': None
         }
         
         # Find company name and sector
@@ -120,7 +121,9 @@ def get_financial_data(ticker):
                     data['ROA'] = value
                 elif 'Чистая рентаб' in field_text:
                     data['Net_Margin'] = value
-        
+                elif 'Процентные расходы' in field_text:
+                    data['Interest_Expense'] = value
+
         return data
         
     except Exception as e:
