@@ -7,7 +7,7 @@ from io import BytesIO
 
 # Add page configuration with wide layout and title
 st.set_page_config(
-    page_title="Smart-Lab Financial Scraper",
+    page_title="МСФО Scraper",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -23,9 +23,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Add title and description
-st.title("Smart-Lab Financial Data Scraper 📊")
+st.title("МСФО Data Scraper 📊")
 st.markdown("""
-This app collects financial data from Smart-Lab for Russian companies including:
+This app collects financial data for Russian-listed companies including:
 - Company Name and Sector
 - EBITDA and Net Profit
 - Net Debt and Assets
@@ -173,7 +173,7 @@ if st.button("Start Scraping", type="primary"):
             st.download_button(
                 label="📥 Download Excel",
                 data=excel_data,
-                file_name="smartlab_financial_data.xlsx",
+                file_name="financial_data.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             )
         
@@ -182,7 +182,7 @@ if st.button("Start Scraping", type="primary"):
             st.download_button(
                 label="📥 Download CSV",
                 data=csv,
-                file_name="smartlab_financial_data.csv",
+                file_name="financial_data.csv",
                 mime="text/csv",
             )
     else:
@@ -190,4 +190,4 @@ if st.button("Start Scraping", type="primary"):
 
 # Add footer
 st.markdown("---")
-st.markdown("Created with ❤️ by [Your Name]")
+st.markdown("Created with by DP")
