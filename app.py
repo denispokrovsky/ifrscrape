@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 from io import BytesIO
+import re
+
 
 # Add page configuration with wide layout and title
 st.set_page_config(
@@ -190,4 +192,4 @@ if st.button("Start Scraping", type="primary"):
 
 # Add footer
 st.markdown("---")
-st.markdown("Created with by DP")
+st.markdown("Good luck!")
