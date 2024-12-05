@@ -107,7 +107,7 @@ def get_financial_data(ticker):
                 
                 if field_text.startswith('EBITDA'):
                     data['EBITDA'] = value
-                elif 'Чистая прибыль' in field_text:
+                elif 'Чистая прибыль,' in field_text:
                     data['Net_Profit'] = value
                 elif 'Чистый долг' in field_text:
                     data['Net_Debt'] = value
